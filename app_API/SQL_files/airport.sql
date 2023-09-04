@@ -1,4 +1,4 @@
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Anaa','AAA',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Anaa','AAA',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Annaba Les Salines','AAE',NULL,'DZ','Algeria');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Aalborg','AAL',NULL,'DK','Denmark');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Mala Mala','AAM',NULL,'ZA','South Africa');
@@ -72,7 +72,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Agatti Island','AGX',NULL,'IN','India');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Abha','AHB',NULL,'SA','Saudi Arabia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Herlong Amedee AAF','AHC','CA','US','United States');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Ahe Airport','AHE',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Ahe Airport','AHE',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Alghero Fertilia','AHO',NULL,'IT','Italy');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Ahuas','AHS',NULL,'HN','Honduras');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Al Hoceima Charif Al Idrissi','AHU',NULL,'MA','Morocco');
@@ -145,7 +145,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Amook','AOS','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Denver Arapahoe Co','APA','CO','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Naples','APF','FL','US','United States');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Apataki','APK',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Apataki','APK',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nampula','APL',NULL,'MZ','Mozambique');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Alpena County Regional','APN','MI','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Apartado','APO',NULL,'CO','Colombia');
@@ -197,7 +197,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Augusta','AUG','ME','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Abu Dhabi Intl','AUH',NULL,'AE','United Arab Emirates');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Alakanuk','AUK','AK','US','United States');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Atuona','AUQ',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Atuona','AUQ',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Aurillac','AUR',NULL,'FR','France');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Austin Bergstrom Intl','AUS','TX','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Aurukun Mission','AUU','QL','AU','Australia');
@@ -216,7 +216,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Alexandroupolis Demokritos Airport','AXD',NULL,'GR','Greece');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Armenia El Eden','AXM',NULL,'CO','Colombia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Spring Point Springpoint Arpt','AXP',NULL,'BS','Bahamas');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Arutua','AXR',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Arutua','AXR',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Akita','AXT',NULL,'JP','Japan');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Axum','AXU',NULL,'ET','Ethiopia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Ayacucho Yanamilla','AYP',NULL,'PE','Peru');
@@ -368,7 +368,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Barinas','BNS',NULL,'VE','Venezuela');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Banja Luka','BNX',NULL,'BA','Bosnia And Herzegovina');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Bellona','BNY',NULL,'SB','Solomon Islands');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Bora Bora Motu mute','BOB',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Bora Bora Motu mute','BOB',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Bocas Del Toro','BOC',NULL,'PA','Panama');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Bordeaux Airport','BOD',NULL,'FR','France');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Bogota Eldorado','BOG',NULL,'CO','Colombia');
@@ -900,7 +900,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Faro','FAO',NULL,'PT','Portugal');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Fargo Hector Field','FAR','ND','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Fresno Airterminal','FAT','CA','US','United States');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Fakarava','FAV',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Fakarava','FAV',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Fayetteville','FAY','NC','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Lubumbashi Luano','FBM',NULL,'CD','Congo (kinshasa)');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kalispell Glacier National Park','FCA','MT','US','United States');
@@ -911,8 +911,8 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Fergana','FEG',NULL,'UZ','Uzbekistan');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Fernando De Noronha','FEN','FN','BR','Brazil');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Fez Sais','FEZ',NULL,'MA','Morocco');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Fangatau','FGU',NULL,'PF','French Polynesia');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Fakahina','FHZ',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Fangatau','FGU',NULL,'FR','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Fakahina','FHZ',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kinshasa NDjili','FIH',NULL,'CD','Congo (kinshasa)');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Al Fujairah Fujairah Intl Arpt','FJR',NULL,'AE','United Arab Emirates');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Baden Baden Karlsruhe Soellingen','FKB',NULL,'DE','Germany');
@@ -1030,7 +1030,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Gemena','GMA',NULL,'CD','Congo (kinshasa)');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Gambela','GMB',NULL,'ET','Ethiopia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Seoul Gimpo International','GMP',NULL,'KR','South Korea');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Gambier Is','GMR',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Gambier Is','GMR',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('San Sebas de la Gomera La Gomera','GMZ',NULL,'ES','Spain');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Lyon Saint Geoirs','GNB',NULL,'FR','France');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Maurice Bishop Intl','GND',NULL,'GD','Grenada');
@@ -1145,7 +1145,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hilton Head','HHH','SC','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Frankfurt Hahn','HHN',NULL,'DE','Germany');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hua Hin Airport','HHQ',NULL,'TH','Thailand');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hikueru','HHZ',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hikueru','HHZ',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hibbing Chisholm','HIB','MN','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Horn Island','HID','QL','AU','Australia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hiroshima International','HIJ',NULL,'JP','Japan');
@@ -1181,7 +1181,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Alahsa','HOF',NULL,'SA','Saudi Arabia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Holguin Frank Pais','HOG',NULL,'CU','Cuba');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hohenems','HOH',NULL,'AT','Austria');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hao Island','HOI',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hao Island','HOI',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Homer','HOM','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Huron Howes','HON','SD','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hof','HOQ',NULL,'DE','Germany');
@@ -1207,7 +1207,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hamilton Island','HTI','QL','AU','Australia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hotan','HTN',NULL,'CN','China');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Huntington Ashland Milton Tri State','HTS','WV','US','United States');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Huahine','HUH',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Huahine','HUH',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hue Phu Bai','HUI',NULL,'VN','Vietnam');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hualien','HUN',NULL,'TW','Taiwan');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Houn','HUQ',NULL,'LY','Libya');
@@ -1483,7 +1483,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nanchang','KHN',NULL,'CN','China');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Khasab','KHS',NULL,'OM','Oman');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Khabarovsk Novyy','KHV',NULL,'RU','Russia');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kauehi','KHZ',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kauehi','KHZ',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kristianstad','KID',NULL,'SE','Sweden');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kingfisher Lake','KIF','ON','CA','Canada');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kish Island','KIH',NULL,'IR','Iran');
@@ -1506,7 +1506,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Akiachak Spb','KKI','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kita Kyushu Kokura','KKJ',NULL,'JP','Japan');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kirkenes Hoeybuktmoen','KKN',NULL,'NO','Norway');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kaukura Atoll','KKR',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kaukura Atoll','KKR',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Ekuk','KKU','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kalskag Municipal','KLG','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kolhapur','KLH',NULL,'IN','India');
@@ -1838,7 +1838,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Manaus Eduardo Gomes Intl','MAO','AM','BR','Brazil');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Maracaibo La Chinita','MAR',NULL,'VE','Venezuela');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Manus Island Momote','MAS',NULL,'PG','Papua New Guinea');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Maupiti','MAU',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Maupiti','MAU',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Mayaguez Eugenio M De Hostos','MAZ',NULL,'PR','Puerto Rico');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Mombasa Moi International','MBA',NULL,'KE','Kenya');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Mmabatho International','MBD',NULL,'ZA','South Africa');
@@ -1931,7 +1931,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Muskegon','MKG','MI','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Hoolehua Molokai','MKK','HI','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Mukah','MKM',NULL,'MY','Malaysia');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Makemo','MKP',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Makemo','MKP',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Merauke Mopah','MKQ',NULL,'ID','Indonesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Meekatharra','MKR','WA','AU','Australia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Makokou','MKU',NULL,'GA','Gabon');
@@ -1977,7 +1977,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Minot International','MOT','ND','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Mountain Village','MOU','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Moranbah','MOV','QL','AU','Australia');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Moorea Temae','MOZ',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Moorea Temae','MOZ',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Mpacha','MPA',NULL,'NA','Namibia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Caticlan Malay','MPH',NULL,'PH','Philippines');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Montpellier Meditarranee','MPL',NULL,'FR','France');
@@ -2036,7 +2036,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Mitu','MVP',NULL,'CO','Colombia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Maroua Salam','MVR',NULL,'CM','Cameroon');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Mucuri','MVS','BA','BR','Brazil');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Mataiva','MVT',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Mataiva','MVT',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Marthas Vineyard','MVY','MA','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Marion Williamson County','MWA','IL','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Maewo','MWF',NULL,'VU','Vanuatu');
@@ -2082,7 +2082,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Qaanaaq','NAQ',NULL,'GL','Greenland');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nassau Intl','NAS',NULL,'BS','Bahamas');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Sao Gonzalo Do Amarante','NAT','RN','BR','Brazil');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Napuka Island','NAU',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Napuka Island','NAU',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nevsehir','NAV',NULL,'TR','Turkey');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Narathiwat','NAW',NULL,'TH','Thailand');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Beijing Nanyuan Airport','NAY',NULL,'CN','China');
@@ -2111,7 +2111,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nagoya Chubu Centrair Intl','NGO',NULL,'JP','Japan');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nagasaki','NGS',NULL,'JP','Japan');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nha Trang','NHA',NULL,'VN','Vietnam');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nuku Hiva','NHV',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nuku Hiva','NHV',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nikolai','NIB','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Niamey','NIM',NULL,'NE','Niger');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Jacksonville NAS','NIP','FL','US','United States');
@@ -2162,7 +2162,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Niuatoputapu Kuini Lavenia','NTT',NULL,'TO','Tonga');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nuremberg Airport','NUE',NULL,'DE','Germany');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nuiqsut','NUI','AK','US','United States');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nukutavake','NUK',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nukutavake','NUK',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nulato','NUL','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Nunapitchuk','NUP','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Norsup','NUS',NULL,'VU','Vanuatu');
@@ -2360,7 +2360,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Parkes','PKE','NS','AU','Australia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Pangkor Airport','PKG',NULL,'MY','Malaysia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Pakokku','PKK',NULL,'MM','Myanmar');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Puka Puka','PKP',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Puka Puka','PKP',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Pokhara','PKR',NULL,'NP','Nepal');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Pekanbaru Simpang Tiga','PKU',NULL,'ID','Indonesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Palangkaraya','PKY',NULL,'ID','Indonesia');
@@ -2420,7 +2420,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Popayan Machangara','PPN',NULL,'CO','Colombia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Proserpine Whitsunday Coast','PPP','QL','AU','Australia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Puerto Princesa','PPS',NULL,'PH','Philippines');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Papeete Faaa','PPT',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Papeete Faaa','PPT',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Port Protection','PPV','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Phu Quoc Duong Dang','PQC',NULL,'VN','Vietnam');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Presque Isle Municipal','PQI','ME','US','United States');
@@ -2450,7 +2450,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Pueblo Memorial','PUB','CO','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Pau Uzein','PUF',NULL,'FR','France');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Punta Cana','PUJ',NULL,'DO','Dominican Republic');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Pukarua','PUK',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Pukarua','PUK',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Punta Arenas Pres Ibanez','PUQ',NULL,'CL','Chile');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Busan Gimhae','PUS',NULL,'KR','South Korea');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Puerto Asis','PUU',NULL,'CO','Colombia');
@@ -2537,7 +2537,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Raleigh Durham','RDU','NC','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Red Devil','RDV','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rodez Marcillac','RDZ',NULL,'FR','France');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Reao','REA',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Reao','REA',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Recife Guararapes Intl','REC','PE','BR','Brazil');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Reggio Calabria Tito Menniti','REG',NULL,'IT','Italy');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Reykjavik','REK',NULL,'IS','Iceland');
@@ -2547,9 +2547,9 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Resistencia','RES','CH','AR','Argentina');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Reynosa Gen Lucio Blanco','REX',NULL,'MX','Mexico');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Greater Rockford','RFD','IL','US','United States');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Raiatea','RFP',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Raiatea','RFP',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rio Grande','RGA','TF','AR','Argentina');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rangiroa','RGI',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rangiroa','RGI',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rio Gallegos Internacional','RGL','SC','AR','Argentina');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Yangon Mingaladon','RGN',NULL,'MM','Myanmar');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rhinelander Oneida County','RHI','WI','US','United States');
@@ -2616,13 +2616,13 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rukumkot','RUK',NULL,'NP','Nepal');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rumjatar','RUM',NULL,'NP','Nepal');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('St Denis de la Reunion Gillot','RUN',NULL,'RE','Reunion');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rurutu','RUR',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rurutu','RUR',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rutland','RUT','VT','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Farafangana','RVA',NULL,'MG','Madagascar');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Saravena','RVE',NULL,'CO','Colombia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Roervik Ryumsjoen Aprt','RVK',NULL,'NO','Norway');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rovaniemi','RVN',NULL,'FI','Finland');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rairua Raivavae','RVV',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rairua Raivavae','RVV',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Roxas City','RXS',NULL,'PH','Philippines');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rahim Yar Khan','RYK',NULL,'PK','Pakistan');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Rzeszow Jasionka','RZE',NULL,'PL','Poland');
@@ -2956,7 +2956,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Pituffik','THU',NULL,'GL','Greenland');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tirana Rinas','TIA',NULL,'AL','Albania');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Taif','TIF',NULL,'SA','Saudi Arabia');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tikehau Atoll','TIH',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tikehau Atoll','TIH',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tijuana Rodriguez','TIJ',NULL,'MX','Mexico');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tembagapura Timika','TIM',NULL,'ID','Indonesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tindouf','TIN',NULL,'DZ','Algeria');
@@ -2969,19 +2969,19 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tari','TIZ',NULL,'PG','Papua New Guinea');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tarija','TJA',NULL,'BO','Bolivia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tyumen','TJM',NULL,'RU','Russia');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Takume','TJN',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Takume','TJN',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tanjung Pandan Bulutumbang','TJQ',NULL,'ID','Indonesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tenakee Springs Tenakee SPB','TKE','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Bandar Lampung Branti','TKG',NULL,'ID','Indonesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tok','TKJ','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Truk','TKK',NULL,'FM','Micronesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tokunoshima','TKN',NULL,'JP','Japan');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Takapoto','TKP',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Takapoto','TKP',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kigoma','TKQ',NULL,'TZ','Tanzania');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tokushima','TKS',NULL,'JP','Japan');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Turku','TKU',NULL,'FI','Finland');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tatakoto','TKV',NULL,'PF','French Polynesia');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Takaroa','TKX',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tatakoto','TKV',NULL,'FR','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Takaroa','TKX',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Teller','TLA','AK','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Toluca','TLC',NULL,'MX','Mexico');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tulear','TLE',NULL,'MG','Madagascar');
@@ -3061,7 +3061,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Taitung','TTT',NULL,'TW','Taiwan');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tetuan Sania Ramel','TTU',NULL,'MA','Morocco');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tulcan','TUA',NULL,'EC','Ecuador');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tubuai','TUB',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tubuai','TUB',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tucuman Benj Matienzo','TUC','TU','AR','Argentina');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tambacounda','TUD',NULL,'SN','Senegal');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tours St Symphorien','TUF',NULL,'FR','France');
@@ -3094,9 +3094,9 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Belize City Municipal','TZA',NULL,'BZ','Belize');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('South Andros','TZN',NULL,'BS','Bahamas');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Trabzon','TZX',NULL,'TR','Turkey');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Ua Huka','UAH',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Ua Huka','UAH',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Narsarsuaq','UAK',NULL,'GL','Greenland');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Ua Pou','UAP',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Ua Pou','UAP',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('San Juan','UAQ','SJ','AR','Argentina');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Samburu','UAS',NULL,'KE','Kenya');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Uberaba','UBA','MG','BR','Brazil');
@@ -3193,7 +3193,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Villagarzon','VGZ',NULL,'CO','Colombia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Saurimo','VHC',NULL,'AO','Angola');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Vilhelmina','VHM',NULL,'SE','Sweden');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Vahitahi','VHZ',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Vahitahi','VHZ',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Vienna International','VIE',NULL,'AT','Austria');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('El Vigia','VIG',NULL,'VE','Venezuela');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Vinh City','VII',NULL,'VN','Vietnam');
@@ -3337,7 +3337,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Kasabonika','XKS','ON','CA','Canada');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Lac Brochet','XLB','MB','CA','Canada');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('St Louis','XLS',NULL,'SN','Senegal');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Manihi','XMH',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Manihi','XMH',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Xiamen','XMN',NULL,'CN','China');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Macas','XMS',NULL,'EC','Ecuador');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Yam Island','XMY','QL','AU','Australia');
@@ -3721,7 +3721,7 @@ INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('San Salvador','ZSA',NULL,'BS','Bahamas');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('St Pierre dela Reunion','ZSE',NULL,'RE','Reunion');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Sandy Lake','ZSJ','ON','CA','Canada');
-INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tureira','ZTA',NULL,'PF','French Polynesia');
+INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tureira','ZTA',NULL,'FR','French Polynesia');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Tete a La Baleine','ZTB','QC','CA','Canada');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Westchester County Stamford Rail STN','ZTF','NY','US','United States');
 INSERT INTO airports (name, code, stateCode, countryCode, countryName) VALUES ('Zakinthos Is','ZTH',NULL,'GR','Greece');

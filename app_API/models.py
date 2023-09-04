@@ -27,7 +27,7 @@ db = SQLAlchemy()
 def import_data():
     try:
       # Run a command and capture the output
-      result = subprocess.run(['python', 'data_import.py', '--db-url', database_path], capture_output=True, text=True, check=True)
+      result = subprocess.run(['python', './app_API/data_import.py', '--db-url', database_path], capture_output=True, text=True, check=True)
 
       # Print the output
       print(result.stdout)
@@ -50,6 +50,7 @@ def setup_db(app, database_path=database_path):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)
+    db.drop_all() 
     db.create_all()
     import_data()
 
@@ -58,7 +59,7 @@ def setup_db(app, database_path=database_path):
 Passenger
 '''
 class Passenger(db.Model):  
-  __tablename__ = 'Passenger'
+  __tablename__ = 'passengers'
 
   id = Column(db.Integer, primary_key=True)
   firstname = Column(String)
@@ -74,6 +75,17 @@ class Passenger(db.Model):
       'firstname': self.firstname,
       'lastname': self.lastname}
 
+class Country(db.Model):
+   __tablename__ = 'countries'
+   code = db.Column(db.String(3), primary_key=True)
+   name = db.Column(db.String(100))
+
+
+class Flightstatus(db.Model):
+   __tablename__ = 'flightstatus'
+
+   id = db.Column(db.Integer, primary_key=True)
+   name = db.Column(db.String(20))
 
 class Flight(db.Model):
     __tablename__ = 'flights'
@@ -81,15 +93,15 @@ class Flight(db.Model):
     id = Column(Integer, primary_key=True)
     flightname = Column(String(20), nullable=False)
     date = Column(DateTime(timezone=True), nullable=False)
-    departure = Column(String(20), ForeignKey('airports.code'))
-    arrival = Column(String(20), ForeignKey('airports.code'))
-    status = Column(Integer, ForeignKey('flightStatus.id'), nullable=False)
+    departure_code = Column(String(20), ForeignKey('airports.code'))
+    arrival_code = Column(String(20), ForeignKey('airports.code'))
+    status = Column(Integer, ForeignKey('flightstatus.id'), nullable=False)
     airline_id = Column(Integer, ForeignKey('airlines.id'), nullable=False)
 
     # Define relationships with other tables
-    departure_airport = relationship("Airport", foreign_keys=[departure])
-    arrival_airport = relationship("Airport", foreign_keys=[arrival])
-    flight_status = relationship("FlightStatus")
+    departure = relationship("Airport", foreign_keys=[departure_code])
+    arrival = relationship("Airport", foreign_keys=[arrival_code])
+    flight_status = relationship("Flightstatus")
     airline = relationship("Airline")
   
     def __init__(self, flightname, date, departure, arrival, status, airline_id):
@@ -113,25 +125,40 @@ class Flight(db.Model):
         }
 
 
-class Airlines(db.Model):
+class Airline(db.Model):
     __tablename__ = 'airlines'
 
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    country_id = db.Column(db.String(64), db.ForeignKey('countries.id'), nullable=False)
+    id = db.Column(Integer, primary_key=True)
+    name = db.Column(String(100), nullable=False)
+    country_code = db.Column(String(64), ForeignKey('countries.code'), nullable=False)
 
-    # Define relationship with the countries table
-    country = db.relationship("Countries")
+        # Define relationships with other tables
+    countrycode = relationship("Country", foreign_keys=[country_code],lazy=True)
 
-
-from flask_sqlalchemy import SQLAlchemy
-
+    def format(self):
+      return {
+        'id': self.id,
+        'name': self.name,
+        'country_code': self.country_code,
+        }
 
 class Airport(db.Model):
     __tablename__ = 'airports'
 
     name = db.Column(db.String(56))
     code = db.Column(db.String(3), primary_key=True)
-    stateCode = db.Column(db.String(2))
-    countryCode = db.Column(db.String(2))
-    countryName = db.Column(db.String(32))
+    statecode = db.Column(db.String(2))
+    countrycode = db.Column(db.String(2), ForeignKey('countries.code'), nullable=False)
+    countryname = db.Column(db.String(32))
+
+    # Define relationships with other tables
+    country = relationship("Country", foreign_keys=[countrycode])
+
+    def format(self):
+      return {
+        'name': self.name,
+        'code': self.code,
+        'statecode' : self.statecode,
+        'countrycode' : self.countrycode,
+        'countryname' : self.countryname,
+        }
