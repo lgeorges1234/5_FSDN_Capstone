@@ -28,7 +28,7 @@ def get_airlines(airline_id=None):
 
 # Get Airlines
 @airline_bp.route('/airlines')
-@restrict_access
+@requires_auth('get:airline')
 def retrieve_airlines():
     try:
         airlines = get_airlines()
@@ -44,7 +44,7 @@ def retrieve_airlines():
 
 # Get Airline by code
 @airline_bp.route('/airlines/<int:airline_id>')
-@restrict_access
+@requires_auth('get:airline')
 def retrieve_airlines_by_id(airline_id):
     try:
         airlines = get_airlines(airline_id)
