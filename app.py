@@ -2,7 +2,7 @@ from flask import Flask,  jsonify
 from app_API.models import setup_db
 from flask_cors import CORS
 
-from app_API.controllers import airport_bp, airline_bp, flight_bp
+from app_API.controllers import airport_bp, airline_bp, flight_bp, country_bp
 from app_API.auth.auth import AuthError, requires_auth
 
 #---------------------------------------
@@ -17,6 +17,7 @@ from app_API.auth.auth import AuthError, requires_auth
 #---------------------------------------
 
 def create_app(test_config=None):
+    print("test_config : " + str(test_config))
     # create and configure the app
     app = Flask(__name__)
     if test_config:
@@ -84,6 +85,12 @@ def create_app(test_config=None):
 #  Flights
 #  ----------------------------------------------------------------
     app.register_blueprint(flight_bp)
+
+
+#  ----------------------------------------------------------------
+#  Counries
+#  ----------------------------------------------------------------
+    app.register_blueprint(country_bp)
 
 
 #  ----------------------------------------------------------------

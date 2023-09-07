@@ -15,12 +15,6 @@ engine = create_engine(db_url)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# Create a new Airline object
-airline = Airline(name='Airfrance', country_code='FR')
-# Add the object to the session
-session.add(airline)
-
-
 #Insert Country from the country.sql file
 with open('./app_API/SQL_files/country.sql', 'r') as file:
     sql_statements = file.read()
@@ -44,6 +38,11 @@ sql_statements = sql_statements.split(';')
 for statement in sql_statements:
     if statement.strip():  # Skip empty statements
         session.execute(statement)
+
+# Create a new Airline object
+airline = Airline(name='Airfrance', country_code='FR')
+# Add the object to the session
+session.add(airline)
 
 # Commit the changes to the database
 session.commit()

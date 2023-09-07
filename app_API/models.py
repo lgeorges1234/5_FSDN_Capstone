@@ -46,6 +46,7 @@ setup_db(app)
     binds a flask application and a SQLAlchemy service
 '''
 def setup_db(app, database_path=database_path):
+    print("database_path : " + str(database_path))
     app.config["SQLALCHEMY_DATABASE_URI"] = database_path
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
@@ -80,12 +81,27 @@ class Country(db.Model):
    code = db.Column(db.String(3), primary_key=True)
    name = db.Column(db.String(100))
 
+   # Define the relationship with the Airport table
+   airports = db.relationship("Airport", backref="countries_airports")
+   airlines = db.relationship("Airline", backref="countries_airlines")
+
+   def format(self):
+    return {
+      'code': self.code,
+      'name': self.name
+      }
 
 class Flightstatus(db.Model):
    __tablename__ = 'flightstatus'
 
    id = db.Column(db.Integer, primary_key=True)
    name = db.Column(db.String(20))
+
+   def format(self):
+    return {
+      'id': self.id,
+      'name': self.name
+      }
 
 class Flight(db.Model):
     __tablename__ = 'flights'
@@ -130,10 +146,10 @@ class Airline(db.Model):
 
     id = db.Column(Integer, primary_key=True)
     name = db.Column(String(100), nullable=False)
-    country_code = db.Column(String(64), ForeignKey('countries.code'), nullable=False)
+    country_code = db.Column(String(64), db.ForeignKey('countries.code'), nullable=False)
 
-        # Define relationships with other tables
-    countrycode = relationship("Country", foreign_keys=[country_code],lazy=True)
+    # Define relationships with other tables
+    # countrycode = relationship("Country", foreign_keys=[country_code],lazy=True)
 
     def format(self):
       return {
@@ -148,11 +164,12 @@ class Airport(db.Model):
     name = db.Column(db.String(56))
     code = db.Column(db.String(3), primary_key=True)
     statecode = db.Column(db.String(2))
-    countrycode = db.Column(db.String(2), ForeignKey('countries.code'), nullable=False)
+    countrycode = db.Column(db.String(2), db.ForeignKey('countries.code'), nullable=False)
     countryname = db.Column(db.String(32))
 
     # Define relationships with other tables
-    country = relationship("Country", foreign_keys=[countrycode])
+    # country = relationship("Country", foreign_keys=[countrycode])
+    # country = relationship("Country", backref="airports")
 
     def format(self):
       return {

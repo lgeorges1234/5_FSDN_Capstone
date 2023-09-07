@@ -7,7 +7,7 @@ from urllib.request import urlopen
 
 AUTH0_DOMAIN = 'dev-h6cc78r73kusntyh.us.auth0.com'
 ALGORITHMS = ['RS256']
-API_AUDIENCE = 'drinks'
+API_AUDIENCE = 'airlines'
 
 ## AuthError Exception
 '''
@@ -166,7 +166,7 @@ def requires_auth(permission=''):
         def wrapper(*args, **kwargs):
             token = get_token_auth_header()
             payload = verify_decode_jwt(token)
-            print(payload)
+            print('payload : ' + str(payload))
             check_permissions(permission, payload)
             return f(payload, *args, **kwargs)
 

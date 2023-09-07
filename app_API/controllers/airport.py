@@ -27,7 +27,7 @@ def get_airports(airport_code=None):
 
 # Get Airports
 @airport_bp.route('/airports')
-@restrict_access
+# @restrict_access
 def retrieve_airports():
     try:
         airports = get_airports()

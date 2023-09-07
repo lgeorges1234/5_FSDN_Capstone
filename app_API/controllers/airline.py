@@ -13,12 +13,13 @@ airline_bp = Blueprint('airline', __name__)
 #---------------------------------------
 
 def get_airlines(airline_id=None):
-    print(airline_id)
+    print("airline_id : " + airline_id)
+    print('retrieve_airlines')
     airlines_dict = {}
     if airline_id:
         airlines_dict = Airline.query.get(airline_id)
     else:
-        airlines_dict = Airline.query.order_by(Airline.country_id, Airline.name).all()
+        airlines_dict = Airline.query.order_by(Airline.country_code, Airline.name).all()
     return airlines_dict
 
 
@@ -28,8 +29,8 @@ def get_airlines(airline_id=None):
 
 # Get Airlines
 @airline_bp.route('/airlines')
-@requires_auth('get:airline')
-def retrieve_airlines():
+@requires_auth('get:airlines')
+def retrieve_airlines(payload):
     try:
         airlines = get_airlines()
         return jsonify(
@@ -44,8 +45,8 @@ def retrieve_airlines():
 
 # Get Airline by code
 @airline_bp.route('/airlines/<int:airline_id>')
-@requires_auth('get:airline')
-def retrieve_airlines_by_id(airline_id):
+@requires_auth('get:airlines')
+def retrieve_airlines_by_id(payload, airline_id):
     try:
         airlines = get_airlines(airline_id)
         return jsonify(
@@ -68,8 +69,8 @@ def retrieve_airlines_by_id(airline_id):
     """
 
 @airline_bp.route('/airlines', methods=['POST'])
-@requires_auth('create:airline')
-def create_airline():
+# @requires_auth('create:airline')
+def create_airline(payload):
     body = request.get_json()
     name = body.get("name", None)
     country_id = body.get("country_id", None)
@@ -106,8 +107,8 @@ def create_airline():
 #  ----------------------------------------------------------------
 
 @airline_bp.route("/airlines/<int:airline_id>", methods=["DELETE"])
-@requires_auth('delete:airline')
-def delete_airline(airline_id):
+@requires_auth('delete:airlines')
+def delete_airline(payload, airline_id):
     try:
         airline = Airline.query.filter(Airline.id==airline_id).one_or_none()
         airline.delete()
@@ -124,7 +125,7 @@ def delete_airline(airline_id):
 #  PATCH Airline
 #  ----------------------------------------------------------------
 @airline_bp.route('/airlines/<int:airline_id>', methods=["PATCH"])
-@requires_auth('patch:airline')
+@requires_auth('patch:airlines')
 def update_airline(upload, airline_id):
     try:
         body: request.get_json()
