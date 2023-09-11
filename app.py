@@ -17,7 +17,6 @@ from app_API.auth.auth import AuthError, requires_auth
 #---------------------------------------
 
 def create_app(test_config=None):
-    print("test_config : " + str(test_config))
     # create and configure the app
     app = Flask(__name__)
     if test_config:

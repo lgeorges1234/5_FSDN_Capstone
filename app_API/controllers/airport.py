@@ -43,7 +43,7 @@ def retrieve_airports():
 
 # Get Airport by code
 @airport_bp.route('/airports/<string:airport_code>')
-@restrict_access
+# @restrict_access
 def retrieve_airports_by_id(airport_code):
     try:
         airports = get_airports(airport_code)
@@ -58,19 +58,22 @@ def retrieve_airports_by_id(airport_code):
 
 # Get Airport by search term
 @airport_bp.route('/airports', methods=['POST'])
-@restrict_access
-def retrieve_airports_by_search_terms(airport_id):
+# @restrict_access
+def retrieve_airports_by_search_terms():
     body = request.get_json()
-    search_term = body.get.searchTerm
+    search_term = body.get("searchTerm", None)
     try:
-        airports = Airport.query.filter(or_(Airport.name.ilike("%{}%".format(search_term)),
-                                    Airport.countryname.ilike("%{}%".format(search_term)))
-                               ).order_by(Airport.countryname, Airport.name).all()
-        return jsonify(
-            {
-                "success": True,
-                "airports": [airport.format() for airport in airports]
-            }
-        )
+        if search_term:
+            airports = Airport.query.filter(or_(Airport.name.ilike("%{}%".format(search_term)),
+                                        Airport.countryname.ilike("%{}%".format(search_term)))
+                                ).order_by(Airport.countryname, Airport.name).all()
+            return jsonify(
+                {
+                    "success": True,
+                    "airports": [airport.format() for airport in airports]
+                }
+            )
+        else:
+            abort(400)
     except:
-        abort(422)
+        abort(404)

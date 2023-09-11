@@ -1,37 +1,44 @@
 from flask import Blueprint, jsonify, abort, request
 from sqlalchemy import or_
-from sqlalchemy.exc import SQLAlchemyError
-from app_API.auth.auth import requires_auth
+from datetime import date
 
+from app_API.auth.auth import get_token_auth_header, requires_auth, verify_decode_jwt
 from app_API.auth.restricted_access import restrict_access
-from ..models import Flight, Flight
+from ..models import Flight
 
 #Instanciate a blueprint object
 flight_bp = Blueprint('flight', __name__)
-
 
 #---------------------------------------
 #           Utility functions
 #---------------------------------------
 
 def get_flights(flight_id=None):
-    print(flight_id)
     flights_dict = {}
     if flight_id:
         flights_dict = Flight.query.get(flight_id)
     else:
-        flights_dict = Flight.query.order_by(Flight.country_id, Flight.name).all()
+        flights_dict = Flight.query.order_by(Flight.date).all()
     return flights_dict
 
+def get_passenger_id():
+    token = get_token_auth_header()
+    payload = verify_decode_jwt(token)
+    passenger_id = payload['sub']
+    return passenger_id
 
+def get_current_date():
+    current_date = date.today()
+    formatted_date = current_date.strftime('%Y-%m-%d')
+    return formatted_date
 
 #  GET Flight
 #  ----------------------------------------------------------------
 
 # Get Flights
 @flight_bp.route('/flights')
-@requires_auth('get:flight')
-def retrieve_flights():
+@requires_auth('get:flights')
+def retrieve_flights(payload):
     try:
         flights = get_flights()
         return jsonify(
@@ -40,147 +47,48 @@ def retrieve_flights():
                 "flights": [flight.format() for flight in flights]
             }
         )
-    except:
-        abort(422)
-
-
-# Get Flight by code
-@flight_bp.route('/flights/<int:flight_id>')
-@requires_auth('get:flight')
-def retrieve_flights_by_id(flight_id):
-    try:
-        flights = get_flights(flight_id)
-        return jsonify(
-            {
-                "success": True,
-                "flights": flights.format()
-            }
-        )
-    except:
-        abort(422)
-
-
-@flight_bp.route('/flights/search', methods=['POST'])
-@requires_auth('get:flight')
-def retrieve_flight_by_search_term():
-    body = request.get_json()
-    search_term = body.get("searchTerm", None)
-
-    try:
-        if search_term:
-            flights = Flight.query.filter(or_(Flight.name.ilike("%{}%".format(search_term)),
-                                        Flight.country_id.ilike("%{}%".format(search_term)))
-                                ).order_by(Flight.country_id, Flight.name).all()
-            return jsonify(
-                {
-                    "success": True,
-                    "flights": [flight.format() for flight in flights]
-                }
-            )
-        else:
-            abort(422, "Missing search term")
-
-    # except SQLAlchemyError as e:
-    #     db.session.rollback()
-    #     abort(500, "Database error")
-
     except Exception as e:
-        abort(500, "Internal server error")
+        # print(e)
+        abort(422)
+
+
 
 
 #  CREATE Flight
 #  ----------------------------------------------------------------
 
     """
-    Endpoint to CREATE a new flight, which will require a name and a country_id.
+    Endpoint to CREATE a new flight, which will require a name and a country_code.
     The endpoint also allows to get an flight based on a search term.
     """
 
 @flight_bp.route('/flights', methods=['POST'])
-@requires_auth('create:flight')
-def create_flight():
+@requires_auth('post:flights')
+def create_flight(payload):
     body = request.get_json()
-    name = body.get("name", None)
-    country_id = body.get("country_id", None)
-    search_term = body.get("searchTerm", None)
+    flightname = body.get("flightname", None)
+    date = get_current_date()
+    departure_code = body.get("departure_code", None)
+    arrival_code = body.get("arrival_code", None)
+    status = body.get("status", None)
+    airline_id = body.get("airline_id", None)
+    passenger_id = get_passenger_id()
 
     try:
-        if search_term:
-            flights = Flight.query.filter(or_(Flight.name.ilike("%{}%".format(search_term)),
-                                        Flight.country_id.ilike("%{}%".format(search_term)))
-                                ).order_by(Flight.country_id, Flight.name).all()
-            return jsonify(
-                {
-                    "success": True,
-                    "flights": [flight.format() for flight in flights]
-                }
-            )
-        elif name and country_id:
-            flight = Flight(name=name, country_id=country_id)
+        if flightname and date and departure_code and arrival_code and status and airline_id and passenger_id:
+            flight = Flight(flightname=flightname, date=date, departure_code=departure_code, arrival_code=arrival_code, status=status, airline_id=airline_id, passenger_id=passenger_id)
             flight.insert()
             return jsonify(
-                {
-                    "success": True,
-                    "flights": flight.format()
-                }
-            )
+                    {
+                        "success": True,
+                        "flights": [flight.format()]
+                    }
+                )
         else:
             abort(422)
 
-    except:
+    except Exception as e:
         abort(422)
 
-
-#  DELETE Flight
-#  ----------------------------------------------------------------
-
-@flight_bp.route("/flights/<int:flight_id>", methods=["DELETE"])
-@requires_auth('delete:flight')
-def delete_flight(flight_id):
-    try:
-        flight = Flight.query.filter(Flight.id==flight_id).one_or_none()
-        flight.delete()
-        return jsonify(
-            {
-                "success": True,
-                "deleted": flight_id
-            }
-            ), 200
-    except:
-        abort(422)
-
-
-#  PATCH Flight
-#  ----------------------------------------------------------------
-@flight_bp.route('/flights/<int:flight_id>', methods=["PATCH"])
-@requires_auth('patch:flight')
-def update_flight(upload, flight_id):
-    try:
-        body: request.get_json()
-
-        if not body:
-            abort(400)
-
-        name = body.get('name', None)
-        country_code = ('country_code', None)
-        flight = Flight.query.filter(Flight.id == flight_id).one_or_more()
-
-        if name:
-            flight.name = name
-        if country_code:
-            flight.country_code = country_code
-        
-        flight.update()
-
-        return jsonify({
-            'success': True,
-            'flights': flight
-        })
-    
-    except Exception:
-        abort(422) 
-
-
-        
 
 
