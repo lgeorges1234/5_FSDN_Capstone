@@ -13,18 +13,17 @@ from app_API.data_import import import_data
 dotenv_path = Path('.env')
 load_dotenv(dotenv_path=dotenv_path)
 
-# database_path = os.environ['DATABASE_URL']
-# if database_path.startswith("postgres://"):
-#   database_path = database_path.replace("postgres://", "postgresql://", 1)
+database_path = os.environ['DATABASE_URL']
+if database_path.startswith("postgres://"):
+  database_path = database_path.replace("postgres://", "postgresql://", 1)
 
-posgres_host = os.getenv("POSTGRES_HOST")
-posgres_port = os.getenv("PORT_DEV")
-database_name = os.getenv("POSTGRES_DB_DEV")
-user_name = os.getenv("POSTGRES_USER_DEV")
-user_password = os.getenv("POSTGRES_PASSWORD_DEV")
+# posgres_host = os.getenv("POSTGRES_HOST")
+# posgres_port = os.getenv("PORT_DEV")
+# database_name = os.getenv("POSTGRES_DB_DEV")
+# user_name = os.getenv("POSTGRES_USER_DEV")
+# user_password = os.getenv("POSTGRES_PASSWORD_DEV")
 
 # database_path = f'postgresql://{user_name}:{user_password}@{posgres_host}:{posgres_port}/{database_name}'
-database_path = f'postgresql://{user_name}:{user_password}@{posgres_host}/{database_name}'
 
 
 db = SQLAlchemy()
