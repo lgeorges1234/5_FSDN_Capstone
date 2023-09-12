@@ -12,13 +12,13 @@ from pathlib import Path
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
 load_dotenv(dotenv_path=dotenv_path) 
 
-posgres_host = os.getenv("POSTGRES_HOST")
-posgres_port = os.getenv("PORT_DEV")
-database_name = os.getenv("POSTGRES_DB_TEST")
-user_name = os.getenv("POSTGRES_USER_TEST")
-user_password = os.getenv("POSTGRES_PASSWORD_TEST")
+# posgres_host = os.getenv("POSTGRES_HOST")
+# posgres_port = os.getenv("PORT_DEV")
+# database_name = os.getenv("POSTGRES_DB_TEST")
+# user_name = os.getenv("POSTGRES_USER_TEST")
+# user_password = os.getenv("POSTGRES_PASSWORD_TEST")
 
-database_path = os.environ['DATABASE_URL']
+databasePath = os.environ['DATABASE_URL_TEST']
 
 manager_token = os.getenv("MANAGER_TOKEN")
 passenger_token = os.getenv("PASSENGER_TOKEN")
@@ -29,7 +29,11 @@ class FSDNTestCase(unittest.TestCase):
 
     def setUp(self):
         """Define test variables and initialize app."""
-        self.database_path = f'postgresql://{user_name}:{user_password}@{posgres_host}:{posgres_port}/{database_name}'
+        # self.database_path = f'postgresql://{user_name}:{user_password}@{posgres_host}:{posgres_port}/{database_name}'
+
+        self.database_path = databasePath
+        if self.database_path.startswith("postgres://"):
+            self.database_path = database_path.replace("postgres://", "postgresql://", 1)
 
         test_config = {
             'DATABASE_URI': self.database_path

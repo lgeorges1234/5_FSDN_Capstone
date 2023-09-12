@@ -49,23 +49,6 @@ def create_app(test_config=None):
     def check_server():
         return "server running"
     
-    # """
-    # Endpoints to handle Passenger
-    # """
-
-    # app.route('/passenger/<int:passenger_id>')
-    # def search_by_passenger(passenger_id):
-    #     try:
-    #         passenger = Passenger.query.filter(passenger_id).one_or_none()
-    #         return jsonify(
-    #             {
-    #                 "success": True,
-    #                 "passenger": passenger.format()
-    #             }
-    #         )
-    #     except:
-    #         abort(422)
-
 
 
 #  ----------------------------------------------------------------
