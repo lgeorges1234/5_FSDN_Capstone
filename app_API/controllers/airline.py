@@ -65,13 +65,9 @@ def retrieve_airlines_by_search_term(payload):
     search_term = body.get("searchTerm", None)
     try:
         if search_term:
-            # airlines = Airline.query.join(Country,Airline.country_code == Country.code).filter(or_(Airline.name.ilike("%{}%".format(search_term)),
-            #                             Country.name.ilike("%{}%".format(search_term)))
-            #                     ).order_by(Airline.country_code, Airline.name).all()
-            airlines = Airline.query.join(Country, Airline.country_code == Country.code)\
-                .filter(or_(Airline.name.ilike("%{}%".format(search_term)),
-                Country.name.ilike("%{}%".format(search_term))))\
-    .order_by(Airline.country_code, Airline.name).all()
+            airlines = Airline.query.filter(or_(Airline.name.ilike("%{}%".format(search_term)),
+                                        Airline.country_code.ilike("%{}%".format(search_term)))
+                                ).order_by(Airline.country_code, Airline.name).all()
             return jsonify(
                 {
                     "success": True,
