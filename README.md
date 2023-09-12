@@ -38,17 +38,35 @@ pip install -r requirements.txt
 
 ### Set up the Database
 
-With Postgres running, create a `trivia` database:
+#### Create a local database using docker
+
+Create a Postgres database using the docker-compose :
+
+The creation of a Postgres Docker instance requires the use of a .env file containing all database information :
 
 ```bash
-createdb trivia
+POSTGRES_HOST=127.0.0.1
+POSTGRES_PASSWORD=ssdddsdfw-fasfasfsda-gfdsgfs
+PORT_DEV=5432
+POSTGRES_DB_DEV=fsdn
+POSTGRES_USER_DEV=fsdn_user
+POSTGRES_PASSWORD_DEV=password123
+POSTGRES_DB_TEST=fsdn_test
+POSTGRES_USER_TEST=fsdn_user_test
+POSTGRES_PASSWORD_TEST=password123_test
+ENV=dev
 ```
-
-Populate the database using the `trivia.psql` file provided. From the `backend` folder in terminal run:
 
 ```bash
-psql trivia < trivia.psql
+docker-compose up
+su - postgres
 ```
+#### Live deployment server 
+
+In order for the project to be submitted, a Render Web Service has been created and deployed. The service can be reached at the following url:
+
+https://render-deployment-flightcomp.onrender.com/
+
 
 ### Run the Server
 
@@ -89,7 +107,6 @@ The `--reload` flag will detect file changes and restart the server automaticall
      - JWT `eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Inh1NS1ucGNtVVNuWW1ncXNZQjhVSSJ9.eyJpc3MiOiJodHRwczovL2Rldi1oNmNjNzhyNzNrdXNudHloLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGY1OTdhYWQ5NDgwYjM1YjFmNDBiNjciLCJhdWQiOiJhaXJsaW5lcyIsImlhdCI6MTY5NDExMjM3NywiZXhwIjoxNjk2NzA0Mzc3LCJhenAiOiIzY2JqSDZjZmd4UWxyRnhmUVp2VXdtbEdYNjZrZEhuUyIsImd0eSI6InBhc3N3b3JkIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFpcmxpbmVzIiwiZ2V0OmFpcmxpbmVzIiwiZ2V0OmZsaWdodHMiLCJwYXRjaDphaXJsaW5lcyIsInBvc3Q6YWlybGluZXMiLCJ1cGRhdGU6ZmxpZ2h0cyJdfQ.Qp9Na15knNbM58TQKm3bgDyDCtEHFaRAzqWjlAeBsC-ayK0YZOSmqD1sgxcJe9zL-8EP_yvaPGawIf3qYxRsoTmRK3JATyX5lAHkBkqlVoiVshxc-RinqvFlgZHnNQp99yFkg1UroTY4e5JE5S2mIgWvxCe49oNQgpB78s8iWxTXlMema8wCGfuWZNK-Ul4YQx9mpT2Pprd_8eio6Uw-MBwFtxrRacgnD9zyIVXI45pFs687Pmg98DWFycHcisCaGaQ7_RUtU9O2buG2l1CVaf39MjSIGyORcCTN-PllI-jGVQQsJ5-GFov0H37w4SI8fwwS8azlggn7UJsNAb8uTw`
 
 
-
 ## Endpoint Documentation
 
 [API Documentation](docs/API_doc.md)
@@ -98,6 +115,11 @@ The `--reload` flag will detect file changes and restart the server automaticall
 
 ## Testing
 
+Two environment variables need to be added to the .env file for the tests to run:
+
+MANAGER_TOKEN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Inh1NS1ucGNtVVNuWW1ncXNZQjhVSSJ9.eyJpc3MiOiJodHRwczovL2Rldi1oNmNjNzhyNzNrdXNudHloLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGY1OTdhYWQ5NDgwYjM1YjFmNDBiNjciLCJhdWQiOiJhaXJsaW5lcyIsImlhdCI6MTY5NDExMjM3NywiZXhwIjoxNjk2NzA0Mzc3LCJhenAiOiIzY2JqSDZjZmd4UWxyRnhmUVp2VXdtbEdYNjZrZEhuUyIsImd0eSI6InBhc3N3b3JkIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFpcmxpbmVzIiwiZ2V0OmFpcmxpbmVzIiwiZ2V0OmZsaWdodHMiLCJwYXRjaDphaXJsaW5lcyIsInBvc3Q6YWlybGluZXMiLCJ1cGRhdGU6ZmxpZ2h0cyJdfQ.Qp9Na15knNbM58TQKm3bgDyDCtEHFaRAzqWjlAeBsC-ayK0YZOSmqD1sgxcJe9zL-8EP_yvaPGawIf3qYxRsoTmRK3JATyX5lAHkBkqlVoiVshxc-RinqvFlgZHnNQp99yFkg1UroTY4e5JE5S2mIgWvxCe49oNQgpB78s8iWxTXlMema8wCGfuWZNK-Ul4YQx9mpT2Pprd_8eio6Uw-MBwFtxrRacgnD9zyIVXI45pFs687Pmg98DWFycHcisCaGaQ7_RUtU9O2buG2l1CVaf39MjSIGyORcCTN-PllI-jGVQQsJ5-GFov0H37w4SI8fwwS8azlggn7UJsNAb8uTw
+PASSENGER_TOKEN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Inh1NS1ucGNtVVNuWW1ncXNZQjhVSSJ9.eyJpc3MiOiJodHRwczovL2Rldi1oNmNjNzhyNzNrdXNudHloLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGY1OTZkYTBmMTQxMzUxOWE2YmIwMjAiLCJhdWQiOiJhaXJsaW5lcyIsImlhdCI6MTY5MzkwODY4OSwiZXhwIjoxNjk2NTAwNjg5LCJhenAiOiIzY2JqSDZjZmd4UWxyRnhmUVp2VXdtbEdYNjZrZEhuUyIsImd0eSI6InBhc3N3b3JkIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFpcmxpbmVzIiwicG9zdDpmbGlnaHRzIl19.d0NgG3HBxi0YxUe3OCy9s2AAK7nhoHlmQVkhhPM9vqRk040UekRn503U6DDCedzkoL9V4Ds2FDPbtoE-l2Xb6DaNmp1sLbhNkx_pGAcBxjhU5K2JJ3E46aVvJf0DhN3PvfBLffZP8It0girXhN0uFfdyGgdnzXYsLhAHcylnY-wYJJG9gbm67A-pI9dL-zymyHMgHw6sL_ijI5D7irV80qRFwki6ajZ_PVv3Ga1H6VQP2XTOqIu7f2E1LZ8b2yFqeyx1V19s7tla2cgw8qAJotIbEzj7q-3ElKMGhUVmW8Bqj4wBNb3xcRjDj7cs2Z6K4mrIbgrBIQA9k7xSvK6CLw
+
 In order to run tests navigate to the backend folder and run the following commands: 
 
 To deploy the tests, run
@@ -105,6 +127,5 @@ To deploy the tests, run
 ```bash
 python test_flaskr.py
 ```
-The first time you run the tests, omit the dropdb command. 
 
 All tests are kept in that file and should be maintained as updates are made to app functionality.
