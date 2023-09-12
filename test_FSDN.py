@@ -318,6 +318,7 @@ class FSDNTestCase(unittest.TestCase):
         res = self.client().get("/flights", headers=self.headers_manager)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)
+        self.assertEqual(data["flights"][0]["flightname"], "DC708")
 
 # Make the tests conveniently executable
 if __name__ == "__main__":
