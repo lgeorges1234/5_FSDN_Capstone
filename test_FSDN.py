@@ -10,13 +10,15 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
-load_dotenv(dotenv_path=dotenv_path)
+load_dotenv(dotenv_path=dotenv_path) 
 
 posgres_host = os.getenv("POSTGRES_HOST")
 posgres_port = os.getenv("PORT_DEV")
 database_name = os.getenv("POSTGRES_DB_TEST")
 user_name = os.getenv("POSTGRES_USER_TEST")
 user_password = os.getenv("POSTGRES_PASSWORD_TEST")
+
+database_path = os.environ['DATABASE_URL']
 
 manager_token = os.getenv("MANAGER_TOKEN")
 passenger_token = os.getenv("PASSENGER_TOKEN")
