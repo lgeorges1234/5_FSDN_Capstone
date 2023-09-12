@@ -12,6 +12,8 @@ Three other tables are initialized at the creation of the database.
 
 ![Database Relationship](./docs/FlightSurety_Comp_Backend_Data.jpeg)
 
+=======
+
 ## Setting up the Backend
 
 ### Install Dependencies
