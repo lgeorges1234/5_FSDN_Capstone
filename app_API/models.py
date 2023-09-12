@@ -23,7 +23,9 @@ database_name = os.getenv("POSTGRES_DB_DEV")
 user_name = os.getenv("POSTGRES_USER_DEV")
 user_password = os.getenv("POSTGRES_PASSWORD_DEV")
 
-database_path = f'postgresql://{user_name}:{user_password}@{posgres_host}:{posgres_port}/{database_name}'
+# database_path = f'postgresql://{user_name}:{user_password}@{posgres_host}:{posgres_port}/{database_name}'
+database_path = f'postgresql://{user_name}:{user_password}@{posgres_host}/{database_name}'
+
 
 db = SQLAlchemy()
 
