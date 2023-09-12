@@ -1,7 +1,7 @@
 # API Reference
 
 ## Getting Started
-- Base URL: At present this app can only be run locally and is not hosted as a base URL. The backend app is hosted at the default, `http://127.0.0.1:5000/`, which is set as a proxy in the frontend configuration. 
+- Base URL: The backend app is hosted using Render hosting Web Sevice : https://render-deployment-flightcomp.onrender.com/. 
  
 
 ## Error Handling
@@ -15,110 +15,93 @@ Errors are returned as JSON objects in the following format:
     "message": "bad request"
 }
 ```
-The API will return two error types when requests fail:
-- 404: Resource Not Found
-- 422: Not Processable 
+The API will return five error types when requests fail:
+- 400: Invalid Request
+- 403: Handles authentication failed error
+- 404: Ressource not found
+- 422: Not Processable
+- 500: Internal Server Error
 
 
 ## Endpoints
 
-### `GET '/categories'`
+### `GET '/airlines'`
 
 - General:
-    - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
+    - Fetches a dictionary of airlines
     - Request Arguments: None
-    - Returns: An object with a single key, categories, that contains an object of id: category_string key:value pairs.
-- Sample: `curl http://127.0.0.1:5000/categories`
+    - Permissions: get:airlines
+    - Returns: An object with two keys: success set to True and airlines, that contains a dictionary of all airlines presents in the database.
+- Sample: `curl https://render-deployment-flightcomp.onrender.com/airlines`
 
 
 ```json
 {
-  "categories": {
-    "1": "Science",
-    "2": "Art",
-    "3": "Geography",
-    "4": "History",
-    "5": "Entertainment",
-    "6": "Sports"
-  }
+    "airlines": [
+        {
+            "country_code": "FR",
+            "id": 1,
+            "name": "Airfrance"
+        }
+    ],
+    "success": true
 }
 ```
 
 ---
 
-### `GET '/questions?page=${integer}'`
+### `GET '/airlines/${id}'`
 
 - General:  
-    - Fetches a paginated set of questions, a total number of questions, all categories and current category string.
-    - Request Arguments: `page` - integer
-    - Returns: An object with 10 paginated questions, total questions, object including all categories, and current category string
+    - Fetches a particular airline specified by the id in the request argument.
+    - Request Arguments: `id` - integer
+    - Permissions: get:airlines
+    - Returns: An object with two keys: success set to True and airlines, that contains a dictionary containing the specific airline.
 
 - Sample: `curl http://127.0.0.1:5000/questions?page=3`
 
 ```json
 {
-  "questions": [
-    {
-      "id": 1,
-      "question": "This is a question",
-      "answer": "This is an answer",
-      "difficulty": 5,
-      "category": 2
-    }
-  ],
-  "totalQuestions": 100,
-  "categories": {
-    "1": "Science",
-    "2": "Art",
-    "3": "Geography",
-    "4": "History",
-    "5": "Entertainment",
-    "6": "Sports"
-  },
-  "currentCategory": "History"
+    "airlines": [
+        {
+            "country_code": "FR",
+            "id": 1,
+            "name": "Airfrance"
+        }
+    ],
+    "success": true
 }
 ```
 
 
 ---
 
-### `GET '/categories/${id}/questions'`
+### `POST '/airlines-search'`
 
 - General:  
-    - Fetches questions for a cateogry specified by id request argument
-    - Request Arguments: `id` - integer
-    - Returns: An object with questions for the specified category, total questions, and current category string
+    - Fetches airlines given a search term 
+    - Request Arguments: `searchTerm` - string
+    - Permissions: get:airlines
+    - Returns: An object with two keys: success set to True and airlines, that contains a dictionary of all airlines name that matche the search term.
 - Sample: `curl http://127.0.0.1:5000/categories/4/questions`
 
 ```json
 {
-  "questions": [
-    {
-      "id": 1,
-      "question": "This is a question",
-      "answer": "This is an answer",
-      "difficulty": 5,
-      "category": 4
-    }
-  ],
-  "totalQuestions": 100,
-  "currentCategory": "History"
+    "airlines": [
+        {
+            "country_code": "FR",
+            "id": 1,
+            "name": "Airfrance"
+        }
+    ],
+    "success": true
 }
 ```
 ---
 
-### `DELETE '/questions/${id}'`
+### `POST '/airlines'`
 - General:  
-    - Deletes a specified question using the id of the question
-    - Request Arguments: `id` - integer
-    - Returns: Does not need to return anything besides the appropriate HTTP status code. Optionally can return the id of the question. If you are able to modify the frontend, you can have it remove the question using the id instead of refetching the questions.
-- Sample: `curl -X DELETE http://127.0.0.1:5000/questions/12`
-
----
-
-### `POST '/quizzes'`
-- General:  
-    - Sends a post request in order to get the next question
+    - Sends a post request in order to create a new airline
     - Request Body:
 
 ```json
@@ -143,6 +126,18 @@ The API will return two error types when requests fail:
   }
 }
 ```
+
+
+### `DELETE '/questions/${id}'`
+- General:  
+    - Deletes a specified question using the id of the question
+    - Request Arguments: `id` - integer
+    - Returns: Does not need to return anything besides the appropriate HTTP status code. Optionally can return the id of the question. If you are able to modify the frontend, you can have it remove the question using the id instead of refetching the questions.
+- Sample: `curl -X DELETE http://127.0.0.1:5000/questions/12`
+
+---
+
+
 
 ---
 
