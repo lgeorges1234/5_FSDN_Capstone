@@ -2,7 +2,7 @@
 
 ## Introduction to FlightCompany API
 
-FlightCompany API is a capstone project for Udacity Fullstack Developper Nanodegree. This API place a user as being a passenger that want to book a flight or an airline manger that can create, delete or update airlines (and later on flight).
+FlightCompany API is a capstone project for Udacity Fullstack Developper Nanodegree. This API gives a client the opportunity to book a flight for a passenger or create, delete and update airlines (and later on flight) in the case of an airline manager.
 Three other tables are initialized at the creation of the database. 
 - airports : lists all main airports in the world
 - countries : lists all countries
