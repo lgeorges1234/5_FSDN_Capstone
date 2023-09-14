@@ -70,7 +70,7 @@ def create_flight(payload):
     date = get_current_date()
     departure_code = body.get("departure_code", None)
     arrival_code = body.get("arrival_code", None)
-    status = body.get("status", None)
+    status = 0
     airline_id = body.get("airline_id", None)
     passenger_id = get_passenger_id()
 
@@ -88,6 +88,7 @@ def create_flight(payload):
             abort(422)
 
     except Exception as e:
+        # print(e)
         abort(422)
 
 

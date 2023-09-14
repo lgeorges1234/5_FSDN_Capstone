@@ -2,13 +2,13 @@
 
 ## Introduction to FlightCompany API
 
-FlightCompany API is a capstone project for Udacity Fullstack Developper Nanodegree. This API gives a client the opportunity to book a flight for a passenger or create, delete and update airlines (and later on flight) in the case of an airline manager.
+FlightCompany API is a capstone project for Udacity Fullstack Developper Nanodegree. This API gives a client the opportunity to book a flight for a passenger or create, delete and update airlines (and later on flight) for an airline manager.
 Three other tables are initialized at the creation of the database. 
-- airports : lists all main airports in the world
-- countries : lists all countries
+- airports : lists world's main airports
+- countries : lists countries
 - flightstatus : relates actual status of the flight. When the flight is created, the default status is 0 - unknown.
 
-### Database relation
+### Database relationship
 
 ![Database Relationship](./docs/FlightSurety_Comp_Backend_Data.jpeg)
 
@@ -40,8 +40,6 @@ pip install -r requirements.txt
 
 #### Create a local database using docker
 
-Create a Postgres database using the docker-compose :
-
 The creation of a Postgres Docker instance requires the use of a .env file containing all database information :
 
 ```bash
@@ -61,6 +59,14 @@ ENV=dev
 docker-compose up
 su - postgres
 ```
+For the needs of Render's database setup, database connection's information are formated into two URLs, added to the .env file:
+
+```bash
+DATABASE_URL=postgresql://fsdn_user:password123@127.0.0.1:5432/fsdn
+DATABASE_URL_TEST=postgresql://fsdn_user_test:password123_test@127.0.0.1:5432/fsdn_test
+```
+
+
 #### Live deployment server 
 
 In order for the project to be submitted, a Render Web Service has been created and deployed. The service can be reached at the following url:

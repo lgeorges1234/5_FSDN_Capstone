@@ -58,7 +58,6 @@ class FSDNTestCase(unittest.TestCase):
             "flightname": "DC708",
             "departure_code": "AHC",
             "arrival_code": "AGH",
-            "status": "0",
             "airline_id": 1,
             }
 
@@ -66,11 +65,8 @@ class FSDNTestCase(unittest.TestCase):
             "flightname": "DC708",
             "departure": "AHC",
             "arrival_code": "AGH",
-            "status": "0",
             "airline_id": 1,
             }
-
-
 
         self.headers_manager = {
             'Authorization': f'Bearer {manager_token}'

@@ -97,6 +97,7 @@ The API will return five error types when requests fail:
     - Permissions: None
     - Request Arguments: None
     - Request Body:
+
      ```json
      {
        "searchTerm": "Atlanta",
@@ -186,6 +187,7 @@ The API will return five error types when requests fail:
     - Permissions: None
     - Request Arguments: None
     - Request Body:
+
      ```json
      {
        "searchTerm": "France",
@@ -271,6 +273,7 @@ The API will return five error types when requests fail:
     - Permissions: `get:airlines`
     - Request Arguments: None
     - Request Body:
+
      ```json
      {
        "searchTerm": "France",
@@ -300,6 +303,7 @@ The API will return five error types when requests fail:
     - Permissions: `post:airlines`
     - Request Arguments: None
     - Request Body:
+
     ```json
     {
       "name": "Lufthansa",
@@ -348,7 +352,8 @@ The API will return five error types when requests fail:
     - Update a specified airline using its id
     - Permissions: `patch:airlines`
     - Request Arguments: `id` - integer
-    - Request Body: one of the airline's parameters or both
+    - Request Body: one of the airline's parameter or both
+
     ```json
     {
       "name": "Lufthansa",
@@ -411,6 +416,7 @@ The API will return five error types when requests fail:
     - Permissions: `post:flights`
     - Request Arguments: None
     - Request Body:
+    
     ```json
     {
       "flightname": "DF706",
