@@ -297,7 +297,6 @@ class FSDNTestCase(unittest.TestCase):
     def test_create_new_flight(self):
         res = self.client().post("/flights", headers=self.headers_passenger, json=self.new_flight)
         data = json.loads(res.data)
-        print(data)
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data["success"], True)
         self.assertEqual(data["flights"][0]["flightname"], "DC708")
@@ -324,7 +323,6 @@ class FSDNTestCase(unittest.TestCase):
         self.client().post("/flights", headers=self.headers_passenger, json=self.new_flight)
         res = self.client().get("/flights", headers=self.headers_manager)
         data = json.loads(res.data)
-        print(data)
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data["flights"][0]["flightname"], "DC708")
 
