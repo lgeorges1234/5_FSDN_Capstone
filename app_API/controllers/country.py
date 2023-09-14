@@ -63,9 +63,8 @@ def retrieve_countries_by_search_terms(country_id):
     body = request.get_json()
     search_term = body.get.searchTerm
     try:
-        countries = Country.query.filter(or_(Country.name.ilike("%{}%".format(search_term)),
-                                    Country.countryname.ilike("%{}%".format(search_term)))
-                               ).order_by(Country.countryname, Country.name).all()
+        countries = Country.query.filter(Country.name.ilike("%{}%".format(search_term))
+                               ).order_by(Country.code, Country.name).all()
         return jsonify(
             {
                 "success": True,
