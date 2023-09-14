@@ -32,7 +32,7 @@ The API will return five error types when requests fail:
     - Request Arguments: None
     - Permissions: get:airlines
     - Returns: An object with two keys: success set to True and airlines, that contains a dictionary of all airlines presents in the database.
-- Sample: `curl https://render-deployment-flightcomp.onrender.com/airlines`
+- Sample: `curl -H "Authorization: Bearer XXXIAMBEARER" https://render-deployment-flightcomp.onrender.com/airlines`
 
 
 ```json
@@ -58,7 +58,7 @@ The API will return five error types when requests fail:
     - Permissions: get:airlines
     - Returns: An object with two keys: success set to True and airlines, that contains a dictionary containing the specific airline.
 
-- Sample: `curl http://127.0.0.1:5000/questions?page=3`
+- Sample: `curl -H "Authorization: Bearer XXXIAMBEARER" https://render-deployment-flightcomp.onrender.com/airlines/1`
 
 ```json
 {
@@ -80,10 +80,15 @@ The API will return five error types when requests fail:
 
 - General:  
     - Fetches airlines given a search term 
-    - Request Arguments: `searchTerm` - string
+    - Request Body:
+```json
+{
+  "searchTerm": "France",
+}
+```
     - Permissions: get:airlines
     - Returns: An object with two keys: success set to True and airlines, that contains a dictionary of all airlines name that matche the search term.
-- Sample: `curl http://127.0.0.1:5000/categories/4/questions`
+- Sample: `curl https://render-deployment-flightcomp.onrender.com/airlines-search -X POST -H "Content-Type: application/json" -H "Authorization: Bearer XXXIAMBEARER" -d '{"searchTerm":"France"}'`
 
 ```json
 {
@@ -106,86 +111,76 @@ The API will return five error types when requests fail:
 
 ```json
 {
-    'previous_questions': [1, 4, 20, 15]
-    'quiz_category': 'current category'
- }
+  "name": "Lufthansa",
+  "country_code": "DE",
+}
 ```
+- Permissions: post:airlines
+- Sample: `curl -X POST https://render-deployment-flightcomp.onrender.com/airlines-search -H "Content-Type: application/json" -H "Authorization: Bearer XXXIAMBEARER" -d '{"name": "Lufthansa","country_code": "DE"}'`
 
-- Sample: `curl http://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application/json" -d '{"previous_questions":[1, 4, 20, 15], "quiz_category":"current category"}'`
-
-- Returns: a single new question object
+- Returns: a single new airline object
 
 ```json
 {
-  "question": {
-    "id": 1,
-    "question": "This is a question",
-    "answer": "This is an answer",
-    "difficulty": 5,
-    "category": 4
-  }
+    "airlines": [
+        {
+            "country_code": "DE",
+            "id": 2,
+            "name": "Lufthansa"
+        }
+    ],
+    "success": true
 }
+
 ```
 
 
-### `DELETE '/questions/${id}'`
+### `DELETE '/airlines/${id}'`
 - General:  
-    - Deletes a specified question using the id of the question
+    - Deletes a specified airline using its id
     - Request Arguments: `id` - integer
-    - Returns: Does not need to return anything besides the appropriate HTTP status code. Optionally can return the id of the question. If you are able to modify the frontend, you can have it remove the question using the id instead of refetching the questions.
-- Sample: `curl -X DELETE http://127.0.0.1:5000/questions/12`
-
----
-
-
-
----
-
-### `POST '/questions'`
-- General:      
-    - Sends a post request in order to add a new question
-    - Request Body:
+    - Sample: `curl -X DELETE https://render-deployment-flightcomp.onrender.com/airlines/2 -H "Authorization: Bearer    
+    XXXIAMBEARER"`
+    - Returns: the airline id that has been deleted
 
 ```json
 {
-  "question": "Heres a new question string",
-  "answer": "Heres a new answer string",
-  "difficulty": 1,
-  "category": 3
+    "deleted":2,
+    "success": true
 }
+
 ```
-- Sample: `curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"question":"Heres a new question string", "answer":"Heres a new answer string", "difficulty":1,"category":3}'`
-
-- Returns: Does not return any new data
-
 ---
-
-### `POST '/questions'`
+### `PATCH '/airlines/${id}'`
 - General:  
-    - Sends a post request in order to search for a specific question by search term
-    - Request Body:
+    - Update a specified airline using its id
+    - Request Arguments: `id` - integer
+    - Request Body: one of the airline's parameters or both
 
 ```json
 {
-  "searchTerm": "this is the term the user is looking for"
+  "name": "Lufthansa",
+  "country_code": "DE",
 }
 ```
-- Sample: `curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"searchTerm":"this is the term the user is looking for"}'`
-
-- Returns: any array of questions, a number of totalQuestions that met the search term and the current category string
+    - Sample: `curl -X PATCH https://render-deployment-flightcomp.onrender.com/airlines/2 -H "Authorization: Bearer    
+    XXXIAMBEARER"`
+    - Returns: a single airline object
 
 ```json
 {
-  "questions": [
-    {
-      "id": 1,
-      "question": "This is a question",
-      "answer": "This is an answer",
-      "difficulty": 5,
-      "category": 5
-    }
-  ],
-  "totalQuestions": 100,
-  "currentCategory": "Entertainment"
+    "airlines": [
+        {
+            "country_code": "DE",
+            "id": 2,
+            "name": "Lufthansa"
+        }
+    ],
+    "success": true
 }
+
 ```
+
+---
+
+
