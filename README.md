@@ -2,9 +2,9 @@
 
 ## Introduction to FlightCompany API
 
-FlightCompany API is a capstone project for Udacity Fullstack Developper Nanodegree. This API gives a client the opportunity to book a flight for a passenger or create, delete and update airlines (and later on flight) in the case of an airline manager.
+FlightCompany API is a capstone project for Udacity Fullstack Developper Nanodegree. This API gives a client the opportunity to book a flight for a passenger or create, delete and update airlines (and later on flights) for an airline manager.
 Three other tables are initialized at the creation of the database. 
-- airports : lists all main airports in the world
+- airports : lists all world's airports
 - countries : lists all countries
 - flightstatus : relates actual status of the flight. When the flight is created, the default status is 0 - unknown.
 
@@ -115,12 +115,12 @@ The `--reload` flag will detect file changes and restart the server automaticall
 
 ## Testing
 
-Two environment variables need to be added to the .env file for the tests to run:
+Two environment variables need to be added to the .env file for the tests to run taking into account the enpoint's permissions:
 
 MANAGER_TOKEN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Inh1NS1ucGNtVVNuWW1ncXNZQjhVSSJ9.eyJpc3MiOiJodHRwczovL2Rldi1oNmNjNzhyNzNrdXNudHloLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGY1OTdhYWQ5NDgwYjM1YjFmNDBiNjciLCJhdWQiOiJhaXJsaW5lcyIsImlhdCI6MTY5NDExMjM3NywiZXhwIjoxNjk2NzA0Mzc3LCJhenAiOiIzY2JqSDZjZmd4UWxyRnhmUVp2VXdtbEdYNjZrZEhuUyIsImd0eSI6InBhc3N3b3JkIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFpcmxpbmVzIiwiZ2V0OmFpcmxpbmVzIiwiZ2V0OmZsaWdodHMiLCJwYXRjaDphaXJsaW5lcyIsInBvc3Q6YWlybGluZXMiLCJ1cGRhdGU6ZmxpZ2h0cyJdfQ.Qp9Na15knNbM58TQKm3bgDyDCtEHFaRAzqWjlAeBsC-ayK0YZOSmqD1sgxcJe9zL-8EP_yvaPGawIf3qYxRsoTmRK3JATyX5lAHkBkqlVoiVshxc-RinqvFlgZHnNQp99yFkg1UroTY4e5JE5S2mIgWvxCe49oNQgpB78s8iWxTXlMema8wCGfuWZNK-Ul4YQx9mpT2Pprd_8eio6Uw-MBwFtxrRacgnD9zyIVXI45pFs687Pmg98DWFycHcisCaGaQ7_RUtU9O2buG2l1CVaf39MjSIGyORcCTN-PllI-jGVQQsJ5-GFov0H37w4SI8fwwS8azlggn7UJsNAb8uTw
 PASSENGER_TOKEN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Inh1NS1ucGNtVVNuWW1ncXNZQjhVSSJ9.eyJpc3MiOiJodHRwczovL2Rldi1oNmNjNzhyNzNrdXNudHloLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGY1OTZkYTBmMTQxMzUxOWE2YmIwMjAiLCJhdWQiOiJhaXJsaW5lcyIsImlhdCI6MTY5MzkwODY4OSwiZXhwIjoxNjk2NTAwNjg5LCJhenAiOiIzY2JqSDZjZmd4UWxyRnhmUVp2VXdtbEdYNjZrZEhuUyIsImd0eSI6InBhc3N3b3JkIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFpcmxpbmVzIiwicG9zdDpmbGlnaHRzIl19.d0NgG3HBxi0YxUe3OCy9s2AAK7nhoHlmQVkhhPM9vqRk040UekRn503U6DDCedzkoL9V4Ds2FDPbtoE-l2Xb6DaNmp1sLbhNkx_pGAcBxjhU5K2JJ3E46aVvJf0DhN3PvfBLffZP8It0girXhN0uFfdyGgdnzXYsLhAHcylnY-wYJJG9gbm67A-pI9dL-zymyHMgHw6sL_ijI5D7irV80qRFwki6ajZ_PVv3Ga1H6VQP2XTOqIu7f2E1LZ8b2yFqeyx1V19s7tla2cgw8qAJotIbEzj7q-3ElKMGhUVmW8Bqj4wBNb3xcRjDj7cs2Z6K4mrIbgrBIQA9k7xSvK6CLw
 
-In order to run tests navigate to the backend folder and run the following commands: 
+In order to run tests, navigate to the backend folder and run the following commands: 
 
 To deploy the tests, run
 
@@ -128,4 +128,3 @@ To deploy the tests, run
 python test_flaskr.py
 ```
 
-All tests are kept in that file and should be maintained as updates are made to app functionality.
